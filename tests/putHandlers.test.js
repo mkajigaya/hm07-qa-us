@@ -13,7 +13,7 @@ const requestBody = {
 test('Request status code Should be 200', async () => {
     let actualResponseCode;
 	try {
-		const response = await fetch(`${config.API_URL}/api/v1/kits/6`, {
+		const response = await fetch(`${config.API_URL}/api/v1/kits/2`, {
 			method: 'PUT',
 			headers: {
 			'Content-Type': 'application/json'
@@ -32,7 +32,7 @@ test('Request status code Should be 200', async () => {
 test('Response body should contain true if the change is acceptable', async () => {
     let actualResponseBody;
 	try {
-		const response = await fetch(`${config.API_URL}/api/v1/kits/6`, {
+		const response = await fetch(`${config.API_URL}/api/v1/kits/2`, {
 			method: 'PUT',
 			headers: {
 			'Content-Type': 'application/json'
@@ -59,7 +59,7 @@ test('Response body should contain false if the product id in the request body i
 
 	let actualResponseBody;
 	try {
-		const response = await fetch(`${config.API_URL}/api/v1/kits/6`, {
+		const response = await fetch(`${config.API_URL}/api/v1/kits/2`, {
 			method: 'PUT',
 			headers: {
 			'Content-Type': 'application/json'
